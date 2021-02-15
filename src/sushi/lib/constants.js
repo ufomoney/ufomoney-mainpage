@@ -504,6 +504,97 @@ export const supportedPools = [
     tokenSymbol: 'TWT',
     icon: '🛡',
   },
+  {
+    pid: 2,
+    lpAddresses: {
+      56: '0xe9e7cea3dedca5984780bafc599bd69add087d56', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0xe9e7cea3dedca5984780bafc599bd69add087d56', // Token, i.e. "DAI"
+    },
+    name: 'Stake BUSD!',
+    symbol: 'BUSD',
+    tokenSymbol: 'BUSD',
+    icon: '💸',
+  },
+  {
+    pid: 3,
+    lpAddresses: {
+      56: '0x2170ed0880ac9a755fd29b2688956bd959f933f8', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0x2170ed0880ac9a755fd29b2688956bd959f933f8', // Token, i.e. "DAI"
+    },
+    name: 'Stake ETH!',
+    symbol: 'ETH',
+    tokenSymbol: 'ETH',
+    icon: '🦏',
+  },
+  {
+    pid: 4,
+    lpAddresses: {
+      56: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c', // Token, i.e. "DAI"
+    },
+    name: 'Stake BTCB!',
+    symbol: 'BTCB',
+    tokenSymbol: 'BTCB',
+    icon: '👴',
+  },
+  {
+    pid: 5,
+    lpAddresses: {
+      56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82', // Token, i.e. "DAI"
+    },
+    name: 'Stake Cake!',
+    symbol: 'Cake',
+    tokenSymbol: 'Cake',
+    icon: '🥞',
+  },
+  {
+    pid: 6,
+    lpAddresses: {
+      56: '0x7083609fce4d1d8dc0c979aab8c869ea2c873402', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0x7083609fce4d1d8dc0c979aab8c869ea2c873402', // Token, i.e. "DAI"
+    },
+    name: 'Stake DOT!',
+    symbol: 'DOT',
+    tokenSymbol: 'DOT',
+    icon: '👾',
+  },
+  {
+    pid: 7,
+    lpAddresses: {
+      56: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d', // Token, i.e. "DAI"
+    },
+    name: 'Stake USDC!',
+    symbol: 'USDC',
+    tokenSymbol: 'USDC',
+    icon: '💲',
+  },
+  {
+    pid: 8,
+    lpAddresses: {
+      56: '0xd41fdb03ba84762dd66a0af1a6c8540ff1ba5dfb', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0xd41fdb03ba84762dd66a0af1a6c8540ff1ba5dfb', // Token, i.e. "DAI"
+    },
+    name: 'Stake SFP!',
+    symbol: 'SFP',
+    tokenSymbol: 'SFP',
+    icon: '🎩',
+  },
 ]
 
 
