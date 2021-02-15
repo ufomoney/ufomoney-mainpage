@@ -58,7 +58,7 @@ const Farm: React.FC = () => {
     <>
       <PageHeader
         icon={icon}
-        subtitle={`Deposit ${lpTokenName}  Tokens and earn ${earnTokenName}`}
+        subtitle={`Deposit ${lpTokenName}  tokens and earn ${earnTokenName}`}
         title={name}
       />
       <StyledFarm>
@@ -77,7 +77,7 @@ const Farm: React.FC = () => {
         </StyledCardsWrapper>
         <Spacer size="lg" />
         <StyledInfo>
-          ⭐️ Every time you stake and unstake LP tokens, the contract will
+          ⭐️ Every time you stake and unstake tokens, the contract will
           automagically harvest UFO rewards for you!
         </StyledInfo>
         <Spacer size="md" />

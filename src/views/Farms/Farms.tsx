@@ -27,8 +27,8 @@ const Farms: React.FC = () => {
             <Route exact path={path}>
               <PageHeader
                 icon={<img src={logo} height="120" />}
-                subtitle="Earn UFO tokens by staking UFO Money Swap LP Tokens"
-                title="Select Your Favorite Farmings"
+                subtitle="Earn UFO tokens by staking different tokens"
+                title="Select Your Favorite"
               />
               <FarmCards />
             </Route>

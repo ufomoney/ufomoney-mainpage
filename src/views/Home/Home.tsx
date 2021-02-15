@@ -13,8 +13,8 @@ const Home: React.FC = () => {
     <Page>
       <PageHeader
         icon={<img src={logo} height={120} />}
-        title="UFO Master is Ready"
-        subtitle="Stake UFO Money Swap LP tokens to claim your very own UFO!"
+        title="UFO Staking and Yield Farming"
+        subtitle="Stake tokens to claim your UFO!"
       />
 
       <Container>
@@ -22,7 +22,7 @@ const Home: React.FC = () => {
       </Container>
       <Spacer size="lg" />
       <StyledInfo>
-        🏆<b>Pro Tip</b>: UFO-BNB LP token pool yields 4.8x more token
+        🏆<b>Pro Tip</b>: UFO-BNB LP token pool yields 6x more token
         rewards per block
       </StyledInfo>
       <Spacer size="lg" />
