@@ -462,13 +462,13 @@ export const CHAIN_ID = 56
 
 export const contractAddresses = {
   sushi: {
-    56: '0xecD246d5Dac3Cd49DfA0144Aea1439a4C4074B64',
+    56: '0x3B72Ac46888f72dD6a6B2076Ca96fcc18e75a935',
   },
   masterChef: {
-    56: '0x4533060563B89c986d8f838f503c6bD2C9F383E7',
+    56: '0x2c7cd9468A3F9fEfb13E1BA49E4Fee406f1C13d6',
   },
   weth: {
-    56: '0xc778417e063141139fce010982780140aa0cd5ab',
+    56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
   },
   xSushi: {
     56: '0x8798249c2e607446efb7ad49ec89dd1865ff4272' // NOTE: Not in use
@@ -481,15 +481,28 @@ export const supportedPools = [
   {
     pid: 0,
     lpAddresses: {
-      56: '0x03e6c12ef405ac3f642b9184eded8e1322de1a9e', // LP Token Address
+      56: '0x3B72Ac46888f72dD6a6B2076Ca96fcc18e75a935', // LP Token Address
     },
     tokenAddresses: {
-      56: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2', // Token, i.e. "DAI"
+      56: '0x3B72Ac46888f72dD6a6B2076Ca96fcc18e75a935', // Token, i.e. "DAI"
     },
     name: 'Stake UFO!',
     symbol: 'UFO',
     tokenSymbol: 'UFO',
     icon: '👽',
+  },
+  {
+    pid: 1,
+    lpAddresses: {
+      56: '0x4b0f1812e5df2a09796481ff14017e6005508003', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0x4b0f1812e5df2a09796481ff14017e6005508003', // Token, i.e. "DAI"
+    },
+    name: 'Stake TWT!',
+    symbol: 'TWT',
+    tokenSymbol: 'TWT',
+    icon: '🛡',
   },
 ]
 
