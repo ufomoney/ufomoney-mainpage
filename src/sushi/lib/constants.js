@@ -608,6 +608,162 @@ export const supportedPools = [
     tokenSymbol: 'SFP',
     icon: '🎩',
   },
+  {
+    pid: 10,
+    lpAddresses: {
+      56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', // Token, i.e. "DAI"
+    },
+    name: 'Stake WBNB!',
+    symbol: 'WBNB',
+    tokenSymbol: 'WBNB',
+    icon: '📀',
+  },
+  {
+    pid: 11,
+    lpAddresses: {
+      56: '0x3ee2200efb3400fabb9aacf31297cbdd1d435d47', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0x3ee2200efb3400fabb9aacf31297cbdd1d435d47', // Token, i.e. "DAI"
+    },
+    name: 'Stake ADA!',
+    symbol: 'ADA',
+    tokenSymbol: 'ADA',
+    icon: '🚿',
+  },
+  {
+    pid: 12,
+    lpAddresses: {
+      56: '0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe', // Token, i.e. "DAI"
+    },
+    name: 'Stake XRP!',
+    symbol: 'XRP',
+    tokenSymbol: 'XRP',
+    icon: '🎀',
+  },
+  {
+    pid: 13,
+    lpAddresses: {
+      56: '0xbf5140a22578168fd562dccf235e5d43a02ce9b1', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0xbf5140a22578168fd562dccf235e5d43a02ce9b1', // Token, i.e. "DAI"
+    },
+    name: 'Stake UNI!',
+    symbol: 'UNI',
+    tokenSymbol: 'UNI',
+    icon: '🦄',
+  },
+  {
+    pid: 14,
+    lpAddresses: {
+      56: '0x4338665cbb7b2485a8855a139b75d5e34ab0db94', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0x4338665cbb7b2485a8855a139b75d5e34ab0db94', // Token, i.e. "DAI"
+    },
+    name: 'Stake LTC!',
+    symbol: 'LTC',
+    tokenSymbol: 'LTC',
+    icon: '🜛',
+  },
+  {
+    pid: 15,
+    lpAddresses: {
+      56: '0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd', // Token, i.e. "DAI"
+    },
+    name: 'Stake LINK!',
+    symbol: 'LINK',
+    tokenSymbol: 'LINK',
+    icon: '🧞',
+  },
+  {
+    pid: 16,
+    lpAddresses: {
+      56: '0x8ff795a6f4d97e7887c79bea79aba5cc76444adf', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0x8ff795a6f4d97e7887c79bea79aba5cc76444adf', // Token, i.e. "DAI"
+    },
+    name: 'Stake BCH!',
+    symbol: 'BCH',
+    tokenSymbol: 'BCH',
+    icon: '👑',
+  },
+  {
+    pid: 17,
+    lpAddresses: {
+      56: '0xba2ae424d960c26247dd6c32edc70b295c744c43', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0xba2ae424d960c26247dd6c32edc70b295c744c43', // Token, i.e. "DAI"
+    },
+    name: 'Stake DOGE!',
+    symbol: 'DOGE',
+    tokenSymbol: 'DOGE',
+    icon: '🐶',
+  },
+  {
+    pid: 18,
+    lpAddresses: {
+      56: '0x56b6fb708fc5732dec1afc8d8556423a2edccbd6', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0x56b6fb708fc5732dec1afc8d8556423a2edccbd6', // Token, i.e. "DAI"
+    },
+    name: 'Stake EOS!',
+    symbol: 'EOS',
+    tokenSymbol: 'EOS',
+    icon: '💧',
+  },
+  {
+    pid: 19,
+    lpAddresses: {
+      56: '0x111111111117dc0aa78b770fa6a738034120c302', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0x111111111117dc0aa78b770fa6a738034120c302', // Token, i.e. "DAI"
+    },
+    name: 'Stake 1INCH!',
+    symbol: '1INCH',
+    tokenSymbol: '1INCH',
+    icon: '🎠',
+  },
+  {
+    pid: 20,
+    lpAddresses: {
+      56: '0x47bead2563dcbf3bf2c9407fea4dc236faba485a', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0x47bead2563dcbf3bf2c9407fea4dc236faba485a', // Token, i.e. "DAI"
+    },
+    name: 'Stake SXP!',
+    symbol: 'SXP',
+    tokenSymbol: 'SXP',
+    icon: '🔥',
+  },
+  {
+    pid: 21,
+    lpAddresses: {
+      56: '0xa184088a740c695e156f91f5cc086a06bb78b827', // LP Token Address
+    },
+    tokenAddresses: {
+      56: '0xa184088a740c695e156f91f5cc086a06bb78b827', // Token, i.e. "DAI"
+    },
+    name: 'Stake AUTO!',
+    symbol: 'AUTO',
+    tokenSymbol: 'AUTO',
+    icon: '🌠',
+  },
 ]
 
 
