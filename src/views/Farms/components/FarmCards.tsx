@@ -154,9 +154,9 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
               )}
             </Button>
             <Button
-              disabled={!poolActive}
-              text={poolActive ? 'Select' : undefined}
-              to={`/farms/${farm.id}`}
+              href={`https://bscscan.com/`}
+              text="View on BscScan"
+              variant="secondary"
             >
               {!poolActive && (
                 <Countdown
