@@ -154,7 +154,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
               )}
             </Button>
             <Button
-              href={`https://https://exchange.pancakeswap.finance/#/swap?outputCurrency=${farm.tokenAddress}`}
+              href={`https://exchange.pancakeswap.finance/#/swap?outputCurrency=${farm.tokenAddress}`}
               text="Get token"
               variant="secondary"
             >
