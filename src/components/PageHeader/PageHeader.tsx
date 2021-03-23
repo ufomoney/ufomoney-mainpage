@@ -11,11 +11,11 @@ interface PageHeaderProps {
 
 const PageHeader: React.FC<PageHeaderProps> = ({ icon, subtitle, title }) => {
   return (
-    <Container size="sm">
+    <Container size="md">
       <StyledPageHeader>
         <StyledIcon>{icon}</StyledIcon>
         <StyledTitle>{title}</StyledTitle>
-        <StyledSubtitle>{subtitle}</StyledSubtitle>
+        <StyledSubtitle>{subtitle} <b>UFO</b> tokens by staking different token</StyledSubtitle>
       </StyledPageHeader>
     </Container>
   )
@@ -40,18 +40,22 @@ const StyledIcon = styled.div`
 `
 
 const StyledTitle = styled.h1`
-  font-family: 'Kaushan Script', sans-serif;
+  font-family: 'Arial Rounded MT';
   color: ${(props) => props.theme.color.grey[600]};
-  font-size: 36px;
+  color: #fff;
+  font-size: 45px;
   text-align: center;
   font-weight: 700;
-  margin: 0;
+  margin: 10px 0;
   padding: 0;
 `
 
 const StyledSubtitle = styled.h3`
   color: ${(props) => props.theme.color.grey[400]};
-  font-size: 18px;
+  font-family: 'Helvetica';
+  letter-spacing: 2px;
+  color: #fff;
+  font-size: 29px;
   font-weight: 400;
   margin: 0;
   padding: 0;

@@ -128,14 +128,30 @@ const Balances: React.FC = () => {
 }
 
 const Footnote = styled.div`
-  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  font-size: 18px;
+  font-family: 'Arial Rounded MT';
+  font-weight: bolder;
   padding: 8px 20px;
-  color: ${(props) => props.theme.color.grey[400]};
-  border-top: solid 1px ${(props) => props.theme.color.grey[300]};
+  // color: ${(props) => props.theme.color.grey[400]};
+  color: #243e60;
+  // border-top: solid 1px ${(props) => props.theme.color.grey[300]};
+  
 `
 const FootnoteValue = styled.div`
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Arial Rounded MT';
+  color: #fff;
   float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 161px;
+  height: 42px;
+  background: linear-gradient(90deg, #007ED9 16.36%, 
+    rgba(0, 223, 252, 0.94) 106.83%);
+  border-radius: 50px;
 `
 
 const StyledWrapper = styled.div`
@@ -157,5 +173,6 @@ const StyledBalance = styled.div`
   display: flex;
   flex: 1;
 `
+
 
 export default Balances

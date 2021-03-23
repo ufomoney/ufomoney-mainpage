@@ -12,14 +12,14 @@ const Home: React.FC = () => {
   return (
     <Page>
       <PageHeader
-        icon={<img src={logo} height={120} />}
-        title="UFO Staking and Yield Farming"
-        subtitle="Stake tokens to claim your UFO!"
+        icon={<img src={logo} height={80} />}
+        title="Select Your Favorite"
+        subtitle="Earn"
       />
 
-      <Container>
+      <Container size='bg'>
         <Balances />
-      </Container>
+      </Container >
       <Spacer size="lg" />
       <StyledInfo>
         🏆<b>Pro Tip</b>: UFO-BNB LP token pool yields 160x more token

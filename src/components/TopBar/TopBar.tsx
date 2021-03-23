@@ -14,7 +14,11 @@ interface TopBarProps {
 const TopBar: React.FC<TopBarProps> = ({ onPresentMobileMenu }) => {
   return (
     <StyledTopBar>
-      <div style={{ backgroundColor: 'black', color: 'white', textAlign: 'center', padding: '3px', marginBottom: '10px' }}>Do not get scammed. Make sure the URL is ufo.money</div>
+      <StyleHeaderText>
+        Do not get scammed. Make sure the URL is <a
+        style={{ color:' #00dffc', textDecoration: 'none'}} href=" ufo.money">
+          ufo.money</a>
+       </StyleHeaderText>
       <Container size="lg">
         <StyledTopBarInner>
           <StyledLogoWrapper>
@@ -22,7 +26,7 @@ const TopBar: React.FC<TopBarProps> = ({ onPresentMobileMenu }) => {
           </StyledLogoWrapper>
           <Nav />
           <StyledAccountButtonWrapper>
-            <AccountButton />
+            <AccountButton/>
           </StyledAccountButtonWrapper>
         </StyledTopBarInner>
       </Container>
@@ -37,7 +41,10 @@ const StyledLogoWrapper = styled.div`
   }
 `
 
-const StyledTopBar = styled.div``
+const StyledTopBar = styled.div`
+  display: flex;
+  flex-direction: column
+`
 
 const StyledTopBarInner = styled.div`
   align-items: center;
@@ -60,7 +67,6 @@ const StyledAccountButtonWrapper = styled.div`
   align-items: center;
   display: flex;
   justify-content: flex-end;
-  width: 156px;
   @media (max-width: 400px) {
     justify-content: center;
     width: auto;
@@ -81,6 +87,18 @@ const StyledMenuButton = styled.button`
     justify-content: center;
     width: 44px;
   }
+`
+const StyleHeaderText = styled.div`
+  background-color: #036BB2;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  align-self: center;
+  width: 70%;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  font-weight: bolder;
 `
 
 export default TopBar
