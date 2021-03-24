@@ -32,6 +32,9 @@ const StylesContainer = styled.div`
   > div {
     width: 250px;
     justify-content: space-around;
+    @media (max-width: 530px) {
+      width: 220px;
+    }
     >div {
       flex: 0;
   flex-direction: row;

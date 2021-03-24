@@ -143,6 +143,10 @@ display: flex;
    rgba(95, 233, 175, 0.48) 97.82%);
    color: #fff;
 }
+
+@media (max-width: 530px) {
+  margin-left: 3px;
+}
 `
 
 const StyledLink = styled(Link)`
