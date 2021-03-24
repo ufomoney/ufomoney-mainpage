@@ -3,7 +3,7 @@ import { Route, Switch, useRouteMatch } from 'react-router-dom'
 import { useWallet } from 'use-wallet'
 
 import logo from '../../assets/img/logo.png'
-
+import unlock from '../../assets/img/unlock.png'
 import Button from '../../components/Button'
 import Page from '../../components/Page'
 import PageHeader from '../../components/PageHeader'
@@ -46,9 +46,9 @@ const Farms: React.FC = () => {
             }}
           >
             <Button
-              onClick={onPresentWalletProviderModal}
-              text="🔓 Unlock Wallet"
-            />
+              onClick={onPresentWalletProviderModal}>
+                <img src={unlock} width="24" height="24"/> Unlock Wallet
+              </Button>
           </div>
         )}
       </Page>

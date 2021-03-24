@@ -23,16 +23,20 @@ const StyledLogo = styled(Link)`
   min-width: 44px;
   padding: 0;
   text-decoration: none;
+  
 `
 
 const StyledText = styled.span`
-  color: ${(props) => props.theme.color.grey[600]};
+  // color: ${(props) => props.theme.color.grey[600]};
   color: #fff;
   font-family: "Arial Rounded MT Bold", sans-serif;
-  font-size: 22px;
+  font-size: 31px;
   font-weight: 700;
   letter-spacing: 0.03em;
   margin-left: ${(props) => props.theme.spacing[2]}px;
+  @media (max-width: 770px) {
+    display: none;
+  }
   @media (max-width: 400px) {
     display: none;
   }

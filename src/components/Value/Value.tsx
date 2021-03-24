@@ -42,7 +42,8 @@ const StyledValue = styled.div`
   font-family: 'Arial Rounded MT';
   // color: ${(props) => props.theme.color.grey[600]};
   color: #243e60;
-  font-size: 40px;
+  margin-top: 5px;
+  font-size: 30px;
   font-weight: 700;
 `
 

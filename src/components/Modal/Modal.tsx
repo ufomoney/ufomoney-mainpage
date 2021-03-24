@@ -28,8 +28,7 @@ const StyledResponsiveWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  width: 100%;
-  max-width: 512px;
+  max-width: 550px;
   @media (max-width: ${(props) => props.theme.breakpoints.mobile}px) {
     flex: 1;
     position: absolute;
@@ -42,16 +41,18 @@ const StyledResponsiveWrapper = styled.div`
 `
 
 const StyledModal = styled.div`
-  padding: 0 20px;
-  background: ${(props) => props.theme.color.grey[200]};
-  border: 1px solid ${(props) => props.theme.color.grey[300]}ff;
+  // padding: 0 20px;
+  // background: ${(props) => props.theme.color.grey[200]};
+  // border: 1px solid ${(props) => props.theme.color.grey[300]}ff;
+  background: linear-gradient(180deg, rgba(222, 241, 243, 0.55) 0%,
+   rgba(76, 147, 142, 0.38) 58.65%, rgba(54, 73, 177, 0.48) 100%);
   border-radius: 12px;
-  box-shadow: inset 1px 1px 0px ${(props) => props.theme.color.grey[100]};
+  // box-shadow: inset 1px 1px 0px ${(props) => props.theme.color.grey[100]};
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
   width: 100%;
-  min-height: 0;
 `
 
 const StyledModalContent = styled.div``

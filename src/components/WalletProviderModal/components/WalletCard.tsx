@@ -5,6 +5,7 @@ import CardContent from '../../CardContent'
 import CardIcon from '../../CardIcon'
 import CardTitle from '../../CardTitle'
 import Spacer from '../../Spacer'
+import styled from 'styled-components'
 
 interface WalletCardProps {
   icon: React.ReactNode
@@ -13,14 +14,40 @@ interface WalletCardProps {
 }
 
 const WalletCard: React.FC<WalletCardProps> = ({ icon, onConnect, title }) => (
-  <Card>
-    <CardContent>
-      <CardIcon>{icon}</CardIcon>
-      <CardTitle text={title} />
-      <Spacer />
-      <Button onClick={onConnect} text="Connect" />
-    </CardContent>
+  <StylesContainer>
+    <Card>
+      <CardContent>
+        <CardFlex>
+          <CardIcon>{icon}</CardIcon>
+          <CardTitle text={title} />
+        </CardFlex>
+        <Button onClick={onConnect} text="Connect" />
+      </CardContent>
   </Card>
+  </StylesContainer>
 )
+
+const StylesContainer = styled.div`
+  width: 250px;
+  > div {
+    width: 250px;
+    justify-content: space-around;
+    >div {
+      flex: 0;
+  flex-direction: row;
+    }
+  }
+`
+
+const CardFlex = styled.div`
+  display: flex;
+  justify-content: center;
+
+  + button {
+    width: 100px;
+    height: 30px;
+    background: #dcedff;
+  }
+`
 
 export default WalletCard

@@ -29,7 +29,7 @@ const AccountButton: React.FC<AccountButtonProps> = (props) => {
         <StyledWalletButton onClick={handleUnlockClick}>Connect wallet</StyledWalletButton>
       ) : (
         // <Button onClick={onPresentAccountModal} size="sm" text="My Wallet" />
-        <StyledWalletButton onClick={onPresentAccountModal}>My wallet</StyledWalletButton>
+        <StyledMyWalletButton onClick={onPresentAccountModal}>My wallet</StyledMyWalletButton>
       )}
       <a href="https://ufo.money" style={{textDecoration: 'none'}}>
         <StyledUFOButton>
@@ -41,7 +41,10 @@ const AccountButton: React.FC<AccountButtonProps> = (props) => {
   )
 }
 
-const StyledAccountButton = styled.div`display: flex;`
+const StyledAccountButton = styled.div`
+  display: flex;
+  align-items: center;
+`
 
 const StyledWalletButton = styled.button`
   background: #fff;
@@ -56,7 +59,38 @@ const StyledWalletButton = styled.button`
   font-size: 16px;
   cursor: pointer;
   margin-right: 15px;
+
+  &:hover {
+    background: linear-gradient(182.61deg, rgba(96, 224, 170, 0.67) 2.17%,
+     rgba(95, 233, 175, 0.48) 97.82%);
+     color: #fff;
+  }
+  @media (max-width: 933px) {
+    width: 100px;
+  }
 `
+const StyledMyWalletButton = styled.button`
+  background: linear-gradient(180deg, rgba(154, 222, 237, 0.63) 0%,
+   rgba(101, 181, 255, 0.72) 100%);;
+  border-radius: 50px;
+  width: 207px;
+  height: 46px;
+  color: #fff;
+  text-align: center;
+  outline: none;
+  border: none;
+  font-weight: bolder;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 15px;
+  @media (max-width: 933px) {
+    width: 100px;
+  }
+  &:hover {
+    border: 3px solid #fff;
+  }
+`
+
 const StyledUFOButton = styled.button`
   background: none;
   width: 167px;
@@ -71,6 +105,9 @@ const StyledUFOButton = styled.button`
   cursor: pointer;
   border-radius: 50px;
   outline: none;
+  @media (max-width: 933px) {
+    width: 100px;
+  }
 `
 
 export default AccountButton
