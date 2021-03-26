@@ -44,8 +44,8 @@ const StyledModal = styled.div`
   // padding: 0 20px;
   // background: ${(props) => props.theme.color.grey[200]};
   // border: 1px solid ${(props) => props.theme.color.grey[300]}ff;
-  background: linear-gradient(180deg, rgba(222, 241, 243, 0.55) 0%,
-   rgba(76, 147, 142, 0.38) 58.65%, rgba(54, 73, 177, 0.48) 100%);
+  background: linear-gradient(180.33deg,rgb(105 103 235) 6.78%, 
+  rgb(62 146 116 / 98%) 99.71%);
   border-radius: 12px;
   // box-shadow: inset 1px 1px 0px ${(props) => props.theme.color.grey[100]};
   display: flex;

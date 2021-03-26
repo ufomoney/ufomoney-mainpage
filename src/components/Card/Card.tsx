@@ -15,7 +15,6 @@ const StyledCard = styled.div`
   height: 122px;
   flex-direction: column;
   &:first-child {
-    margin-right: 29px;
     @media (max-width: 770px) {
       margin-right: 0;
       margin-bottom: 29px;

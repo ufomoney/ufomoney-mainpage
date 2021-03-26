@@ -77,8 +77,9 @@ const Farm: React.FC = () => {
         </StyledCardsWrapper>
         <Spacer size="lg" />
         <StyledInfo>
-          ⭐️ Every time you stake and unstake tokens, the contract will
-          automagically harvest UFO rewards for you!
+          ⭐️ Every time you stake and unstake tokens,
+          <div>the contract will
+          automagically harvest UFO rewards for you!</div>
         </StyledInfo>
         <Spacer size="md" />
       </StyledFarm>
@@ -97,7 +98,6 @@ const StyledFarm = styled.div`
 
 const StyledCardsWrapper = styled.div`
   display: flex;
-  width: 600px;
   @media (max-width: 768px) {
     width: 100%;
     flex-flow: column nowrap;
@@ -109,13 +109,12 @@ const StyledCardWrapper = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
-  @media (max-width: 768px) {
-    width: 80%;
-  }
+ 
 `
 
 const StyledInfo = styled.h3`
-  color: ${(props) => props.theme.color.grey[400]};
+  // color: ${(props) => props.theme.color.grey[400]};
+  color: #fff;
   font-size: 16px;
   font-weight: 400;
   margin: 0;

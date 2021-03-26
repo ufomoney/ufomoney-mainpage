@@ -19,9 +19,9 @@ const WalletCard: React.FC<WalletCardProps> = ({ icon, onConnect, title }) => (
       <CardContent>
         <CardFlex>
           <CardIcon>{icon}</CardIcon>
-          <CardTitle text={title} />
+          <CardTitle text={''} />
         </CardFlex>
-        <Button onClick={onConnect} text="Connect" />
+        <Button onClick={onConnect} text={title} />
       </CardContent>
   </Card>
   </StylesContainer>
@@ -29,15 +29,24 @@ const WalletCard: React.FC<WalletCardProps> = ({ icon, onConnect, title }) => (
 
 const StylesContainer = styled.div`
   width: 250px;
+  margin: 0 auto;
+
   > div {
-    width: 250px;
+    width: 220px;
     justify-content: space-around;
+    margin:0 auto;
+    &:first-child {
+      
+      margin-right: auto;
+    }
+
     @media (max-width: 530px) {
       width: 220px;
     }
     >div {
-      flex: 0;
-  flex-direction: row;
+      flex: none;
+      flex-direction: row;
+      align-items: center;
     }
   }
 `
@@ -47,8 +56,7 @@ const CardFlex = styled.div`
   justify-content: center;
 
   + button {
-    width: 100px;
-    height: 30px;
+    height: 40px;
     background: #dcedff;
   }
 `

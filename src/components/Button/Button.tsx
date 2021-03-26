@@ -134,7 +134,6 @@ border: none;
 font-weight: bolder;
 font-size: 16px;
 cursor: pointer;
-margin-right: 15px;
 display: flex;
   justify-content: center;
   align-items: center;

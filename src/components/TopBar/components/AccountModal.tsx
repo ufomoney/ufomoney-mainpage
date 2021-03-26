@@ -14,6 +14,8 @@ import ModalContent from '../../ModalContent'
 import ModalTitle from '../../ModalTitle'
 import Spacer from '../../Spacer'
 import Value from '../../Value'
+import alien from '../../../assets/img/alien_icon.png'
+
 
 const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
   const { account, reset } = useWallet()

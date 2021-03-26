@@ -168,6 +168,13 @@ const StyledWrapper = styled.div`
   align-items: center;
   position: relative;
   display: flex;
+
+  > div:first-child {
+    margin-right: 20px;
+    @media (max-width:813px) {
+    }
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     flex-flow: column nowrap;
@@ -191,7 +198,7 @@ const StyledLineContainer = styled.div`
   position: absolute;
   left: 18%;
   z-index: -1;
-  @media (max-width: 770px) {
+  @media (max-width: 769px) {
     left: -20%;
     right: 40%;
     top: 10%;

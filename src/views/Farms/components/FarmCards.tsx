@@ -55,7 +55,7 @@ const FarmCards: React.FC = () => {
           : null,
       }
       const newFarmRows = [...farmRows]
-      if (newFarmRows[newFarmRows.length - 1].length === 3) {
+      if (newFarmRows[newFarmRows.length - 1].length === 4) {
         newFarmRows.push([farmWithStakedValue])
       } else {
         newFarmRows[newFarmRows.length - 1].push(farmWithStakedValue)
@@ -134,26 +134,57 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
       <Card>
         <CardContent>
           <StyledContent>
-            <CardIcon>{farm.icon}</CardIcon>
-            <StyledTitle>{farm.name}</StyledTitle>
-            <StyledDetails>
-              <StyledDetail>Deposit {farm.lpToken}</StyledDetail>
-              <StyledDetail>Earn {farm.earnToken.toUpperCase()}</StyledDetail>
-            </StyledDetails>
-            <Spacer />
-            <Button
+            <Container>
+              <CardIcon>{farm.icon}</CardIcon>
+            <ContainerSec>
+              <StyledDetails>
+                <StyledDetail>Deposit {farm.lpToken}</StyledDetail>
+                <StyledDetail>Earn {farm.earnToken.toUpperCase()}</StyledDetail>
+              </StyledDetails>
+              <StyledTitle>{farm.name}</StyledTitle>
+            </ContainerSec>
+            </Container>
+            <ContainerThrd>
+              <StyledInsight>
+                <span>APY</span>
+                <span>
+                  {farm.apy
+                    ? `${farm.apy
+                        .times(new BigNumber(100))
+                        .times(new BigNumber(3))
+                        .toNumber()
+                        .toLocaleString('en-US')
+                        .slice(0, -1)}%`
+                    : 'Loading ...'}
+                </span>
+                {/* <span>
+                  {farm.tokenAmount
+                    ? (farm.tokenAmount.toNumber() || 0).toLocaleString('en-US')
+                    : '-'}{' '}
+                  {farm.tokenSymbol}
+                </span>
+                <span>
+                  {farm.wethAmount
+                    ? (farm.wethAmount.toNumber() || 0).toLocaleString('en-US')
+                    : '-'}{' '}
+                  ETH
+                </span> */}
+              </StyledInsight>
+              <Button
               disabled={!poolActive}
               text={poolActive ? 'Select' : undefined}
               to={`/farms/${farm.id}`}
-            >
+              >
               {!poolActive && (
                 <Countdown
                   date={new Date(startTime * 1000)}
                   renderer={renderer}
                 />
               )}
-            </Button>
-            <Button
+              </Button>
+            </ContainerThrd>
+            
+            {/* <Button
               href={`https://exchange.pancakeswap.finance/#/swap?outputCurrency=${farm.tokenAddress}`}
               text="Get token"
               variant="secondary"
@@ -164,32 +195,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
                   renderer={renderer}
                 />
               )}
-            </Button>
-            <StyledInsight>
-              <span>APY</span>
-              <span>
-                {farm.apy
-                  ? `${farm.apy
-                      .times(new BigNumber(100))
-                      .times(new BigNumber(3))
-                      .toNumber()
-                      .toLocaleString('en-US')
-                      .slice(0, -1)}%`
-                  : 'Loading ...'}
-              </span>
-              {/* <span>
-                {farm.tokenAmount
-                  ? (farm.tokenAmount.toNumber() || 0).toLocaleString('en-US')
-                  : '-'}{' '}
-                {farm.tokenSymbol}
-              </span>
-              <span>
-                {farm.wethAmount
-                  ? (farm.wethAmount.toNumber() || 0).toLocaleString('en-US')
-                  : '-'}{' '}
-                ETH
-              </span> */}
-            </StyledInsight>
+            </Button> */}
+            
           </StyledContent>
         </CardContent>
       </Card>
@@ -208,6 +215,43 @@ const RainbowLight = keyframes`
 	100% {
 		background-position: 0% 50%;
 	}
+`
+
+const Container = styled.div`
+  display: flex;
+  width: 100%;
+`
+
+const ContainerSec = styled.div`
+  margin-left: 24px;
+`
+const ContainerThrd = styled.div`
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: flex-end;
+  width:106%;
+
+  > button {
+    font-family: 'Arial Rounded MT';
+    color: #fff;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 129px;
+    height: 32px;
+    background: linear-gradient(90deg, #007ED9 16.36%, 
+      rgba(0, 223, 252, 0.94) 106.83%);
+    border-radius: 50px;
+
+    > a {
+      padding: 0;
+      margin: 0 -5px;
+      height: 100%;
+      width: 100%;
+    }
+  }
 `
 
 const StyledCardAccent = styled.div`
@@ -238,7 +282,12 @@ const StyledCardAccent = styled.div`
 `
 
 const StyledCards = styled.div`
-  width: 900px;
+  width: auto;
+
+  @media (max-width: 1510px) {
+    width: 756px;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -264,15 +313,21 @@ const StyledRow = styled.div`
 
 const StyledCardWrapper = styled.div`
   display: flex;
-  width: calc((900px - ${(props) => props.theme.spacing[4]}px * 2) / 3);
+  // width: calc((900px - ${(props) => props.theme.spacing[4]}px * 2) / 3);
   position: relative;
+  margin: 10px;
+  > div {
+    height: 145px;
+    border-radius: 25px;
+  }
 `
 
 const StyledTitle = styled.h4`
   color: ${(props) => props.theme.color.grey[600]};
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 700;
-  margin: ${(props) => props.theme.spacing[2]}px 0 0;
+  // margin: ${(props) => props.theme.spacing[2]}px 0 0;
+  margin: 0;
   padding: 0;
 `
 
@@ -280,16 +335,18 @@ const StyledContent = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
 `
 
 const StyledSpacer = styled.div`
+  display: none;
   height: ${(props) => props.theme.spacing[4]}px;
   width: ${(props) => props.theme.spacing[4]}px;
 `
 
 const StyledDetails = styled.div`
   margin-top: ${(props) => props.theme.spacing[2]}px;
-  text-align: center;
 `
 
 const StyledDetail = styled.div`
@@ -300,11 +357,10 @@ const StyledInsight = styled.div`
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  border-radius: 8px;
+  border-radius: 50px;
   background: #fffdfa;
   color: #aa9584;
-  width: 100%;
-  margin-top: 12px;
+  width: 160px;
   line-height: 32px;
   font-size: 13px;
   border: 1px solid #e6dcd5;
