@@ -230,7 +230,8 @@ const ContainerThrd = styled.div`
   margin-top: 10px;
   justify-content: space-between;
   align-items: flex-end;
-  width:106%;
+  width: 100%;
+  margin-bottom: 10px;
 
   > button {
     font-family: 'Arial Rounded MT';

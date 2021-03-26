@@ -18,7 +18,8 @@ const FooterContainer = styled.div`
   z-index: -1;
   position: absolute;
   width: 100%;
-  height: 215px;
+  height: 127px;
+  background-size: cover;
 `
 
 const StyledPage = styled.div``

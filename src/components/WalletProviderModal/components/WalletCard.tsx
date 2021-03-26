@@ -49,7 +49,9 @@ const StylesContainer = styled.div`
       flex-direction: row;
       align-items: center;
 
-      @media
+      @media (max-width: 530px) {
+        flex-direction: column;
+      }
     }
   }
 `
@@ -58,9 +60,18 @@ const CardFlex = styled.div`
   display: flex;
   justify-content: center;
 
+  > div:first-child {
+    @media (max-with: 5)
+  }
+
   + button {
     height: 40px;
     background: #dcedff;
+
+    @media (max-width: 530px) {
+      width: auto;
+      margin-top: 10px;
+    }
   }
 `
 

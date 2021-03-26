@@ -131,6 +131,7 @@ justify-content: center;
 // margin-top: ${(props) => props.theme.spacing[6]}px;
 width: 100%;
 justify-content: flex-end;
+margin-bottom: 10px;
 
 > button {
   font-family: 'Arial Rounded MT';

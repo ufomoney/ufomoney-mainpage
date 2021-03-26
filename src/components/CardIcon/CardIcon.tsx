@@ -21,7 +21,7 @@ const StyledCardIcon = styled.div`
   //   inset -6px -6px 12px ${props => props.theme.color.grey[100]};
   // margin: 0 auto ${props => props.theme.spacing[3]}px;
   @media (max-width: 530px) {
-    display: none;
+    width:25px;
   }
 `
 
