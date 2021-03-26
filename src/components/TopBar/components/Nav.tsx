@@ -83,7 +83,7 @@ const StyledAbsoluteLink = styled.a`
     padding-right: 0;
   }
 
-  @media (max-width: 448px) {
+  @media (max-width: 530px) {
     margin-right: 25px;
   }
 `

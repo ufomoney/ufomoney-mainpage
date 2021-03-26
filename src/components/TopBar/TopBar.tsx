@@ -58,7 +58,7 @@ const StyledTopBarInner = styled.div`
   max-width: ${(props) => props.theme.siteWidth}px;
   width: 100%;
 
-  @media (max-width:450px) {
+  @media (max-width: 530px) {
     flex-direction: column;
   }
 `
@@ -81,7 +81,7 @@ const StyledAccountButtonWrapper = styled.div`
     width: auto;
   }
 
-  @media (max-width: 448px) {
+  @media (max-width: 530px) {
     margin-top: 30px;
   }
 `
