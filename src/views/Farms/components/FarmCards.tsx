@@ -31,7 +31,6 @@ const FarmCards: React.FC = () => {
     ({ tokenSymbol }) => tokenSymbol === 'SUSHI',
   )
 
-  console.log(stakedValue);
 
   const sushiPrice =
     sushiIndex >= 0 && stakedValue[sushiIndex]
@@ -94,7 +93,6 @@ interface FarmCardProps {
 const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
   const [startTime, setStartTime] = useState(0)
   const [harvestable, setHarvestable] = useState(0)
-
   const { account } = useWallet()
   const { lpTokenAddress } = farm
   const sushi = useSushi()
@@ -149,7 +147,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
                 <span>APY</span>
                 <span>
                   {farm.apy
-                    ? `${farm.apy
+                    ? `${farm.totalWethValue
                         .times(new BigNumber(100))
                         .times(new BigNumber(3))
                         .toNumber()
