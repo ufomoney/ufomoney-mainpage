@@ -66,6 +66,9 @@ const Farm: React.FC = () => {
           <StyledCardWrapper>
             <Harvest pid={pid} />
           </StyledCardWrapper>
+          <StyledLineContainer>
+            <StyledLine/>
+          </StyledLineContainer>
           <Spacer />
           <StyledCardWrapper>
             <Stake
@@ -98,6 +101,8 @@ const StyledFarm = styled.div`
 
 const StyledCardsWrapper = styled.div`
   display: flex;
+  position: relative;
+
   @media (max-width: 768px) {
     width: 100%;
     flex-flow: column nowrap;
@@ -110,6 +115,41 @@ const StyledCardWrapper = styled.div`
   flex: 1;
   flex-direction: column;
  
+`
+const StyledLineContainer = styled.div`
+  width: 291px;
+  height: 199px;
+  position: absolute;
+  left: 30%;
+  bottom: -31%;
+  z-index: -1;
+
+  @media (max-width:770px) {
+    display:none;
+  }
+`
+const StyledLine = styled.div`
+  width: 100%;
+  height: 100%;
+  position:relative;
+  
+  &::before {
+    content:"";
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    position:absolute;
+    z-index:-1;
+    padding: 2px;
+    border-radius: 35px;
+    background: #00dffc;
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
 `
 
 const StyledInfo = styled.h3`
