@@ -171,8 +171,10 @@ const StyledWrapper = styled.div`
 
   > div:first-child {
     margin-right: 20px;
-    @media (max-width:813px) {
-    }
+
+    @media (max-width: 400px) {
+    margin-right: 0;
+  }
   }
 
   @media (max-width: 768px) {
@@ -202,6 +204,10 @@ const StyledLineContainer = styled.div`
     left: -20%;
     right: 40%;
     top: 10%;
+  }
+
+  @media (max-width:450px) {
+    display:none;
   }
 `
 const StyledLine = styled.div`

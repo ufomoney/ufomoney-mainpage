@@ -77,6 +77,10 @@ const StyledNlo = styled.div`
   position: absolute;
   z-index: -1;
   right: 39vw;
+
+  @media (max-width:450px) {
+    display:none;
+  }
 `
 const StyledAnotherNlo = styled.div`
   background: url(${nlo_an});
@@ -87,6 +91,10 @@ const StyledAnotherNlo = styled.div`
   z-index: -1;
   left: 39vw;
   bottom: 0;
+
+  @media (max-width:450px) {
+    display:none;
+  }
 `
 
 export default PageHeader

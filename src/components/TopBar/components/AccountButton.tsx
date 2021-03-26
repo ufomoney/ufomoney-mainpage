@@ -105,6 +105,7 @@ const StyledUFOButton = styled.button`
   cursor: pointer;
   border-radius: 50px;
   outline: none;
+
   @media (max-width: 933px) {
     width: 100px;
   }

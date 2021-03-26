@@ -14,11 +14,17 @@ const StyledCard = styled.div`
   width: 358px;
   height: 122px;
   flex-direction: column;
+
   &:first-child {
+
     @media (max-width: 770px) {
       margin-right: 0;
       margin-bottom: 29px;
     }
+  }
+
+  @media (max-width: 400px) {
+    width: 300px;
   }
   
 `

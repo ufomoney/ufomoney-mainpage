@@ -57,6 +57,10 @@ const StyledTopBarInner = styled.div`
   justify-content: space-between;
   max-width: ${(props) => props.theme.siteWidth}px;
   width: 100%;
+
+  @media (max-width:450px) {
+    flex-direction: column;
+  }
 `
 const StyledNavWrapper = styled.div`
   display: flex;
@@ -71,9 +75,14 @@ const StyledAccountButtonWrapper = styled.div`
   align-items: center;
   display: flex;
   justify-content: flex-end;
+
   @media (max-width: 400px) {
     justify-content: center;
     width: auto;
+  }
+
+  @media (max-width: 448px) {
+    margin-top: 30px;
   }
 `
 
@@ -104,6 +113,12 @@ const StyleHeaderText = styled.div`
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   font-weight: bolder;
+
+  @media (max-width: 850px) {
+    width: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 `
 
 export default TopBar

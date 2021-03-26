@@ -1,23 +1,17 @@
 import React from 'react'
-import aboutUs from '../../../assets/img/aboutUs.png'
-import exchange from '../../../assets/img/exchange.png'
-import stake from '../../../assets/img/stake.png'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Nav: React.FC = () => {
   return (
     <StyledNav>
-      <StyledLink exact activeClassName="active" to="/">
-        <StyledImg src={aboutUs}/>
+      <StyledAbsoluteLink href="https://info.ufo.money">
         About Us
-      </StyledLink>
+      </StyledAbsoluteLink>
       <StyledAbsoluteLink href="https://swap.ufo.money">
-      <StyledImg src={exchange} />
         Exchange
       </StyledAbsoluteLink>
       <StyledLink exact activeClassName="active" to="/farms">
-      <StyledImg src={stake} />
         Stake
       </StyledLink>
     </StyledNav>
@@ -58,8 +52,8 @@ const StyledLink = styled(NavLink)`
 
   @media (max-width: 533px) {
     font-size: 14px;
-    
   }
+  
 `
 
 const StyledAbsoluteLink = styled.a`
@@ -88,12 +82,9 @@ const StyledAbsoluteLink = styled.a`
     padding-left: 5px;
     padding-right: 0;
   }
-`
 
-const StyledImg = styled.img`
-  position: relative;
-  top: 8px;
-  margin-right: 10px
+  @media (max-width: 448px) {
+    margin-right: 25px;
+  }
 `
-
 export default Nav

@@ -40,13 +40,16 @@ const StylesContainer = styled.div`
       margin-right: auto;
     }
 
-    @media (max-width: 530px) {
-      width: 220px;
+    @media (max-width: 540px) {
+      width: 193px;
     }
+
     >div {
       flex: none;
       flex-direction: row;
       align-items: center;
+
+      @media
     }
   }
 `
