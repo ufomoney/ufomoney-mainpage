@@ -105,7 +105,7 @@ const Balances: React.FC = () => {
         <Footnote>
           <div>Pending harvest</div>
           <FootnoteValue>
-            <PendingRewards /> UFO
+            <PendingRewards/> <span>&nbsp;&nbsp;</span> UFO
           </FootnoteValue>
         </Footnote>
       </Card>

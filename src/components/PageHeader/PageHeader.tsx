@@ -17,7 +17,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ icon, subtitle, title }) => {
       <StyledPageHeader>
         <StyledIcon>{icon}</StyledIcon>
         <StyledTitle>{title}</StyledTitle>
-        <StyledSubtitle>{subtitle} <b>UFO!</b></StyledSubtitle>
+        <StyledSubtitle><b>{subtitle}</b> </StyledSubtitle>
       </StyledPageHeader>
       <div style={{position: 'relative'}}>
         <StyledNlo/>
