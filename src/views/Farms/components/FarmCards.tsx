@@ -31,7 +31,6 @@ const FarmCards: React.FC = () => {
     ({ tokenSymbol }) => tokenSymbol === 'SUSHI',
   )
 
-  console.log(stakedValue);
 
   const sushiPrice =
     sushiIndex >= 0 && stakedValue[sushiIndex]
