@@ -22,8 +22,6 @@ if (typeof GOOGLE_ANALYTICS_ID === "string") {
 }
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App />,
   document.getElementById('root'),
 )
