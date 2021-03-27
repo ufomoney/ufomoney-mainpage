@@ -74,7 +74,7 @@ const StyledTokenSymbol = styled.span`
   font-weight: 700;
 `
 const StyledButton = styled.div`
-  padding-left: 64px;
+  padding-left: 10px;
   > button {
     width: 60px;
   }

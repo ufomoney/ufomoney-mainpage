@@ -80,7 +80,7 @@ const Stake: React.FC<StakeProps> = ({ lpContract, pid, tokenName }) => {
             </Container>
           </StyledCardHeader>
           <StyledCardActions>
-            {!allowance.toNumber() ? (
+            {allowance.toNumber() ? (
               <Button
                 disabled={requestedApproval}
                 onClick={handleApprove}

@@ -16,6 +16,8 @@ import Home from './views/Home'
 import Staking from "./views/Staking";
 import { CHAIN_ID } from './sushi/lib/constants'
 
+import {hot} from 'react-hot-loader/root';
+
 const App: React.FC = () => {
   const [mobileMenu, setMobileMenu] = useState(false)
 
@@ -85,4 +87,4 @@ const Disclaimer: React.FC = () => {
   return <div />
 }
 
-export default App
+export default hot(App)
