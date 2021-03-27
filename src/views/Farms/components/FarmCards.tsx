@@ -31,6 +31,7 @@ const FarmCards: React.FC = () => {
     ({ tokenSymbol }) => tokenSymbol === 'SUSHI',
   )
 
+  console.log(stakedValue);
 
   const sushiPrice =
     sushiIndex >= 0 && stakedValue[sushiIndex]
@@ -93,6 +94,7 @@ interface FarmCardProps {
 const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
   const [startTime, setStartTime] = useState(0)
   const [harvestable, setHarvestable] = useState(0)
+
   const { account } = useWallet()
   const { lpTokenAddress } = farm
   const sushi = useSushi()
@@ -125,7 +127,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
   }, [sushi, lpTokenAddress, account, setHarvestable])
 
   const poolActive = true // startTime * 1000 - Date.now() <= 0
-
+  // console.log(farm.totalWethValue)
   return (
     <StyledCardWrapper>
       {farm.tokenSymbol === 'DAI' && <StyledCardAccent />}
@@ -151,8 +153,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
                         .times(new BigNumber(100))
                         .times(new BigNumber(3))
                         .toNumber()
-                        .toLocaleString('en-US')
-                        .slice(0, -1)}%`
+                        .toLocaleString('en-US')}%`
                     : 'Loading ...'}
                 </span>
                 {/* <span>

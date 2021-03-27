@@ -1,5 +1,6 @@
+@import url(//db.onlinewebfonts.com/c/ef6bdf5ef216552c7e9869841e891ca0?family=Arial+Rounded+MT+Bold);
+
 body {
-  @import url(//db.onlinewebfonts.com/c/ef6bdf5ef216552c7e9869841e891ca0?family=Arial+Rounded+MT+Bold);
   background: linear-gradient(90deg, #007ED8 0%, rgba(28, 167, 219, 0.92) 100%);
   margin: 0;
   font-family: 'Noto Sans', sans-serif;

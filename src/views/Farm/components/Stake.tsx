@@ -119,9 +119,7 @@ const Container = styled.div`
 const StyledCardHeader = styled.div`
   align-items: center;
   display: flex;
-  flex-direction: column;
   width: 100%;
-  flex-direction: row;
   margin-top: 10px;
 `
 const StyledCardActions = styled.div`

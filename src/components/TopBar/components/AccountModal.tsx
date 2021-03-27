@@ -78,6 +78,7 @@ const StyledBalanceWrapper = styled.div`
   flex: 1;
   flex-direction: column;
   margin-bottom: ${(props) => props.theme.spacing[4]}px;
-`
+  
+  `
 
 export default AccountModal
