@@ -32,9 +32,9 @@ const Farms: React.FC = () => {
               />
               <FarmCards />
             </Route>
-            {/* <Route path={`${path}/:farmId`}>
+            <Route path={`${path}/:farmId`}>
               <Farm />
-            </Route> */}
+            </Route>
           </>
         ) : (
           <div
