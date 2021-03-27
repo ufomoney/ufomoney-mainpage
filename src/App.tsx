@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route} from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { UseWalletProvider } from 'use-wallet'
 import DisclaimerModal from './components/DisclaimerModal'
@@ -32,14 +32,14 @@ const App: React.FC = () => {
       <Router>
         <TopBar onPresentMobileMenu={handlePresentMobileMenu} />
         <MobileMenu onDismiss={handleDismissMobileMenu} visible={mobileMenu} />
-        <Switch>
-          <Route path="/" exact>
+        <section>
+          <Route path="/" exact component={Home}>
             <Home />
           </Route>
           <Route path="/farms">
             <Farms />
           </Route>
-        </Switch>
+        </section>
       </Router>
     </Providers>
   )
