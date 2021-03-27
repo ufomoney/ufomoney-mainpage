@@ -74,8 +74,10 @@ const Stake: React.FC<StakeProps> = ({ lpContract, pid, tokenName }) => {
         <StyledCardContentInner>
           <StyledCardHeader>
             <CardIcon>👨🏻‍🍳</CardIcon>
-            <Value value={getBalanceNumber(stakedBalance)} />
-            <Label text={`${tokenName} Tokens Staked`} />
+            <Container>
+              <Label text={`${tokenName} Tokens Staked`} />
+              <Value value={getBalanceNumber(stakedBalance)} />
+            </Container>
           </StyledCardHeader>
           <StyledCardActions>
             {!allowance.toNumber() ? (
@@ -91,7 +93,6 @@ const Stake: React.FC<StakeProps> = ({ lpContract, pid, tokenName }) => {
                   text="Unstake"
                   onClick={onPresentWithdraw}
                 />
-                <StyledActionSpacer />
                 <IconButton onClick={onPresentDeposit}>
                   <AddIcon />
                 </IconButton>
@@ -104,16 +105,51 @@ const Stake: React.FC<StakeProps> = ({ lpContract, pid, tokenName }) => {
   )
 }
 
+const Container = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-left: 23px;
+
+  > div {
+    margin-top: 0;
+  }
+`
+
 const StyledCardHeader = styled.div`
   align-items: center;
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
 `
 const StyledCardActions = styled.div`
+display: flex;
+justify-content: center;
+// margin-top: ${(props) => props.theme.spacing[6]}px;
+width: 100%;
+justify-content: space-around;
+margin-bottom: 10px;
+
+> button {
+  font-family: 'Arial Rounded MT';
+  color: #fff;
+  float: right;
   display: flex;
   justify-content: center;
-  margin-top: ${(props) => props.theme.spacing[6]}px;
-  width: 100%;
+  align-items: center;
+  width: 129px;
+  height: 32px;
+  background: linear-gradient(90deg, #007ED9 16.36%, 
+    rgba(0, 223, 252, 0.94) 106.83%);
+  border-radius: 50px;
+
+  > a {
+    padding: 0;
+    margin: 0 -5px;
+    height: 100%;
+    width: 100%;
+  }
+}
 `
 
 const StyledActionSpacer = styled.div`

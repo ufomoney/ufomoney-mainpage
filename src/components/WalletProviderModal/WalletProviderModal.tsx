@@ -2,8 +2,9 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { useWallet } from 'use-wallet'
 
-import metamaskLogo from '../../assets/img/metamask-fox.svg'
-import walletConnectLogo from '../../assets/img/wallet-connect.svg'
+
+import wc_icon from '../../assets/img/wc_logo.svg'
+import binance from '../../assets/img/binance.svg'
 
 import Button from '../Button'
 import Modal, { ModalProps } from '../Modal'
@@ -31,7 +32,7 @@ const WalletProviderModal: React.FC<ModalProps> = ({ onDismiss }) => {
         <StyledWalletsWrapper>
           <StyledWalletCard>
             <WalletCard
-              icon={<img src={metamaskLogo} style={{ height: 32 }} />}
+              icon={<img src={binance} style={{ height: 32 }} />}
               onConnect={() => connect('injected')}
               title="Any BSC Wallet"
             />
@@ -39,7 +40,7 @@ const WalletProviderModal: React.FC<ModalProps> = ({ onDismiss }) => {
           <Spacer size="sm" />
           <StyledWalletCard>
             <WalletCard
-              icon={<img src={walletConnectLogo} style={{ height: 24 }} />}
+              icon={<img src={wc_icon} style={{ width: 32, height: 32 }} />}
               onConnect={() => connect('walletconnect')}
               title="WalletConnect (View only)"
             />
@@ -56,15 +57,22 @@ const WalletProviderModal: React.FC<ModalProps> = ({ onDismiss }) => {
 
 const StyledWalletsWrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  @media (max-width: ${(props) => props.theme.breakpoints.mobile}px) {
+
+  @media (max-width: 530px) {
     flex-direction: column;
-    flex-wrap: none;
   }
+
+  // flex-wrap: wrap;
+  // @media (max-width: ${(props) => props.theme.breakpoints.mobile}px) {
+  //   flex-direction: column;
+  //   flex-wrap: none;
+  // }
 `
 
 const StyledWalletCard = styled.div`
-  flex-basis: calc(50% - ${(props) => props.theme.spacing[2]}px);
+  // flex-basis: calc(50% - ${(props) => props.theme.spacing[2]}px);
+  align-items: center;
+  
 `
 
 export default WalletProviderModal

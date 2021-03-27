@@ -25,8 +25,10 @@ const Harvest: React.FC<HarvestProps> = ({ pid }) => {
         <StyledCardContentInner>
           <StyledCardHeader>
             <CardIcon>👽</CardIcon>
-            <Value value={getBalanceNumber(earnings)} />
-            <Label text="UFO Earned" />
+            <Container>
+              <Label text="UFO Earned" />
+              <Value value={getBalanceNumber(earnings)} />
+            </Container>
           </StyledCardHeader>
           <StyledCardActions>
             <Button
@@ -45,16 +47,53 @@ const Harvest: React.FC<HarvestProps> = ({ pid }) => {
   )
 }
 
+const Container = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-left: 23px;
+
+  > div {
+    margin-top: 0;
+  }
+`
+
 const StyledCardHeader = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  flex-direction: row;
+  margin-top: 10px;
 `
 const StyledCardActions = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: ${(props) => props.theme.spacing[6]}px;
+  // margin-top: ${(props) => props.theme.spacing[6]}px;
   width: 100%;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  
+  > button {
+    font-family: 'Arial Rounded MT';
+    color: #fff;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 129px;
+    height: 32px;
+    background: linear-gradient(90deg, #007ED9 16.36%, 
+      rgba(0, 223, 252, 0.94) 106.83%);
+    border-radius: 50px;
+
+    > a {
+      padding: 0;
+      margin: 0 -5px;
+      height: 100%;
+      width: 100%;
+    }
+  }
 `
 
 const StyledSpacer = styled.div`

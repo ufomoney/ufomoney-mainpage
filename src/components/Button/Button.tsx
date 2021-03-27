@@ -42,26 +42,26 @@ const Button: React.FC<ButtonProps> = ({
   let fontSize: number
   switch (size) {
     case 'sm':
-      boxShadow = `4px 4px 8px ${color.grey[300]},
-        -8px -8px 16px ${color.grey[100]}FF;`
+      // boxShadow = `4px 4px 8px ${color.grey[300]},
+      //   -8px -8px 16px ${color.grey[100]}FF;`
       buttonPadding = spacing[3]
       buttonSize = 36
       fontSize = 14
       break
     case 'lg':
-      boxShadow = `6px 6px 12px ${color.grey[300]},
-        -12px -12px 24px ${color.grey[100]}ff;`
+      // boxShadow = `6px 6px 12px ${color.grey[300]},
+      //   -12px -12px 24px ${color.grey[100]}ff;`
       buttonPadding = spacing[4]
       buttonSize = 72
       fontSize = 16
       break
     case 'md':
     default:
-      boxShadow = `6px 6px 12px ${color.grey[300]},
-        -12px -12px 24px -2px ${color.grey[100]}ff;`
-      buttonPadding = spacing[4]
-      buttonSize = 56
-      fontSize = 16
+      // boxShadow = `6px 6px 12px ${color.grey[300]},
+      //   -12px -12px 24px -2px ${color.grey[100]}ff;`
+      // buttonPadding = spacing[4]
+      // buttonSize = 56
+      // fontSize = 16
   }
 
   const ButtonChild = useMemo(() => {
@@ -76,13 +76,13 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <StyledButton
-      boxShadow={boxShadow}
-      color={buttonColor}
+      // boxShadow={boxShadow}
+      // color={buttonColor}
       disabled={disabled}
-      fontSize={fontSize}
+      // fontSize={fontSize}
       onClick={onClick}
-      padding={buttonPadding}
-      size={buttonSize}
+      // padding={buttonPadding}
+      // size={buttonSize}
     >
       {children}
       {ButtonChild}
@@ -99,27 +99,53 @@ interface StyledButtonProps {
   size: number
 }
 
-const StyledButton = styled.button<StyledButtonProps>`
-  align-items: center;
-  background-color: ${props => props.theme.color.grey[200]};
-  border: 0;
-  border-radius: 12px;
-  box-shadow: ${props => props.boxShadow};
-  color: ${props => !props.disabled ? props.color : `${props.color}55`};
-  cursor: pointer;
-  display: flex;
-  font-size: ${props => props.fontSize}px;
-  font-weight: 700;
-  height: ${props => props.size}px;
+// const StyledButton = styled.button<StyledButtonProps>`
+//   align-items: center;
+//   background-color: ${props => props.theme.color.grey[200]};
+//   border: 0;
+//   border-radius: 12px;
+//   box-shadow: ${props => props.boxShadow};
+//   color: ${props => !props.disabled ? props.color : `${props.color}55`};
+//   cursor: pointer;
+//   display: flex;
+//   font-size: ${props => props.fontSize}px;
+//   font-weight: 700;
+//   height: ${props => props.size}px;
+//   justify-content: center;
+//   outline: none;
+//   padding-left: ${props => props.padding}px;
+//   padding-right: ${props => props.padding}px;
+//   pointer-events: ${props => !props.disabled ? undefined : 'none'};
+//   width: 100%;
+//   &:hover {
+//     background-color: ${props => props.theme.color.grey[100]};
+//   }
+// `
+
+const StyledButton = styled.button`
+background: #fff;
+border-radius: 50px;
+width: 207px;
+height: 46px;
+color: #1d4273;
+text-align: center;
+outline: none;
+border: none;
+font-weight: bolder;
+font-size: 16px;
+cursor: pointer;
+display: flex;
   justify-content: center;
-  outline: none;
-  padding-left: ${props => props.padding}px;
-  padding-right: ${props => props.padding}px;
-  pointer-events: ${props => !props.disabled ? undefined : 'none'};
-  width: 100%;
-  &:hover {
-    background-color: ${props => props.theme.color.grey[100]};
-  }
+  align-items: center;
+&:hover {
+  background: linear-gradient(182.61deg, rgba(96, 224, 170, 0.67) 2.17%,
+   rgba(95, 233, 175, 0.48) 97.82%);
+   color: #fff;
+}
+
+@media (max-width: 530px) {
+  margin-left: 3px;
+}
 `
 
 const StyledLink = styled(Link)`

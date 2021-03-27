@@ -103,23 +103,32 @@ const Balances: React.FC = () => {
           </StyledBalances>
         </CardContent>
         <Footnote>
-          Pending harvest
+          <div>Pending harvest</div>
           <FootnoteValue>
-            <PendingRewards /> UFO
+            <PendingRewards/> <span>&nbsp;&nbsp;</span> UFO
           </FootnoteValue>
         </Footnote>
       </Card>
-      <Spacer />
-
+      <StyledLineContainer>
+        <StyledLine/>
+      </StyledLineContainer>
       <Card>
         <CardContent>
-          <Label text="Total UFO Supply" />
-          <Value
-            value={totalSupply ? getBalanceNumber(totalSupply) : 'Locked'}
-          />
+        <StyledBalances>
+            <StyledBalance>
+              <SushiIcon />
+              <Spacer />
+              <div style={{ flex: 1 }}>
+              <Label text="Total UFO Supply" />
+              <Value
+                value={totalSupply ? getBalanceNumber(totalSupply) : 'Locked'}
+              />
+              </div>
+            </StyledBalance>
+          </StyledBalances>
         </CardContent>
         <Footnote>
-          New rewards per block
+          <div>New rewards per block</div>
           <FootnoteValue>0.0008888 UFO</FootnoteValue>
         </Footnote>
       </Card>
@@ -128,19 +137,46 @@ const Balances: React.FC = () => {
 }
 
 const Footnote = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;  
   font-size: 14px;
-  padding: 8px 20px;
-  color: ${(props) => props.theme.color.grey[400]};
-  border-top: solid 1px ${(props) => props.theme.color.grey[300]};
+  font-family: 'Arial Rounded MT';
+  font-weight: bolder;
+  // padding: 8px 20px;
+  padding-bottom: 10px;
+  // color: ${(props) => props.theme.color.grey[400]};
+  color: #243e60;
+  // border-top: solid 1px ${(props) => props.theme.color.grey[300]};
+
 `
 const FootnoteValue = styled.div`
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Arial Rounded MT';
+  color: #fff;
   float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 129px;
+  height: 32px;
+  background: linear-gradient(90deg, #007ED9 16.36%, 
+    rgba(0, 223, 252, 0.94) 106.83%);
+  border-radius: 50px;
 `
 
 const StyledWrapper = styled.div`
   align-items: center;
+  position: relative;
   display: flex;
+
+  > div:first-child {
+    margin-right: 20px;
+
+    @media (max-width: 400px) {
+    margin-right: 0;
+  }
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     flex-flow: column nowrap;
@@ -156,6 +192,46 @@ const StyledBalance = styled.div`
   align-items: center;
   display: flex;
   flex: 1;
+  padding-left: 10px;
+`
+const StyledLineContainer = styled.div`
+  width: 471px;
+  height: 210px;
+  position: absolute;
+  left: 18%;
+  z-index: -1;
+  @media (max-width: 769px) {
+    left: -20%;
+    right: 40%;
+    top: 10%;
+  }
+
+  @media (max-width:450px) {
+    display:none;
+  }
+`
+const StyledLine = styled.div`
+  width: 100%;
+  height: 100%;
+  position:relative;
+  
+  &::before {
+    content:"";
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    position:absolute;
+    z-index:-1;
+    padding: 2px;
+    border-radius: 35px;
+    background: linear-gradient(to right, #0283DA, #02d9f9fa); 
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
 `
 
 export default Balances

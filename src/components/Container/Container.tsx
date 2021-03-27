@@ -3,7 +3,7 @@ import styled, { ThemeContext } from 'styled-components'
 
 interface ContainerProps {
   children?: React.ReactNode,
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'bg' | 'lg'
 }
 
 const Container: React.FC<ContainerProps> = ({ children, size = 'md' }) => {
@@ -15,6 +15,9 @@ const Container: React.FC<ContainerProps> = ({ children, size = 'md' }) => {
       break
     case 'md':
       width = siteWidth * 2 / 3
+      break
+    case 'bg':
+      width = siteWidth / 2 / 3 * 5
       break
     case 'lg':
     default:
@@ -33,10 +36,13 @@ interface StyledContainerProps {
 
 const StyledContainer = styled.div<StyledContainerProps>`
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 20px auto;
   max-width: ${props => props.width}px;
   padding: 0 ${props => props.theme.spacing[4]}px;
-  width: 100%;
+  // width: 100%;
+  @media(max-width: 980px) {
+    padding: 0;
+  }
 `
 
 export default Container

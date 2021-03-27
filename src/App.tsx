@@ -16,6 +16,7 @@ import Home from './views/Home'
 import Staking from "./views/Staking";
 import { CHAIN_ID } from './sushi/lib/constants'
 
+
 const App: React.FC = () => {
   const [mobileMenu, setMobileMenu] = useState(false)
 

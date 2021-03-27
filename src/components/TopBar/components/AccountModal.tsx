@@ -14,6 +14,8 @@ import ModalContent from '../../ModalContent'
 import ModalTitle from '../../ModalTitle'
 import Spacer from '../../Spacer'
 import Value from '../../Value'
+import alien from '../../../assets/img/alien_icon.png'
+
 
 const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
   const { account, reset } = useWallet()
@@ -76,6 +78,7 @@ const StyledBalanceWrapper = styled.div`
   flex: 1;
   flex-direction: column;
   margin-bottom: ${(props) => props.theme.spacing[4]}px;
-`
+  
+  `
 
 export default AccountModal

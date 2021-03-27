@@ -12,10 +12,14 @@ const Footer: React.FC = () => (
 )
 
 const StyledFooter = styled.footer`
+  margin-top: 30px;
   align-items: center;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 `
+
+
 const StyledFooterInner = styled.div`
   align-items: center;
   display: flex;
