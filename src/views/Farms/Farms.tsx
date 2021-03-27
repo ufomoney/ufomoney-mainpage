@@ -24,7 +24,7 @@ const Farms: React.FC = () => {
       <Page>
         {!!account ? (
           <>
-            <Route exact path={path}>
+            <Route exact path={`${path}/`}>
               <PageHeader
                 icon={<img src={logo} height="120" />}
                 subtitle="Earn UFO tokens by staking different tokens"
