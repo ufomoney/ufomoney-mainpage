@@ -44,13 +44,25 @@ const StylesContainer = styled.div`
       width: 193px;
     }
 
-    >div {
+    > div {
       flex: none;
       flex-direction: row;
       align-items: center;
+      justify-content: space-around;
+      padding: 0;
 
       @media (max-width: 530px) {
         flex-direction: column;
+      }
+
+      > button {
+        width: 150px;
+        margin: 5px 0 0 0;
+      }
+
+      > div {
+        width: 32px;
+        height: 32px;
       }
     }
   }
@@ -60,16 +72,13 @@ const CardFlex = styled.div`
   display: flex;
   justify-content: center;
 
-  > div:first-child {
-    @media (max-with: 5)
-  }
 
   + button {
     height: 40px;
     background: #dcedff;
 
     @media (max-width: 530px) {
-      width: auto;
+      width: 160px;
       margin-top: 10px;
     }
   }
