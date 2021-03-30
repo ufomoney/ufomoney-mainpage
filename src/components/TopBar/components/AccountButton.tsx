@@ -33,7 +33,7 @@ const AccountButton: React.FC<AccountButtonProps> = (props) => {
       )}
       <a href="https://ufo.money" style={{textDecoration: 'none'}}>
         <StyledUFOButton>
-          <img src={earnUfo}/>
+          <img src={earnUfo} width="34"/>
           Earn UFO</StyledUFOButton>
       </a>
       

@@ -34,7 +34,7 @@ const Home: React.FC = () => {
       </StyledInfo>
       <Spacer size="lg" />
       <StyledButton to="/farms">
-        <img src={mining}/> 
+        <img src={mining} width="24"/> 
         <div>DISCOVER MINING</div>
       </StyledButton>
         {/* <Button text="👀 See the Pools" to="/farms" variant="secondary" /> */}
