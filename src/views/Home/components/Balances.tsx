@@ -28,6 +28,7 @@ const PendingRewards: React.FC = () => {
     sumEarning += new BigNumber(earning)
       .div(new BigNumber(10).pow(18))
       .toNumber()
+
   }
 
   const [farms] = useFarms()
@@ -57,10 +58,10 @@ const PendingRewards: React.FC = () => {
       <CountUp
         start={start}
         end={end}
-        decimals={end < 0 ? 4 : end > 1e5 ? 0 : 3}
-        duration={1}
+        decimals={end < 0 ? 6 : end > 1e5 ? 0 : 6}
+        duration={20}
         onStart={() => {
-          setScale(1.25)
+          setScale(1.15)
           setTimeout(() => setScale(1), 600)
         }}
         separator=","

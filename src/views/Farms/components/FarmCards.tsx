@@ -28,7 +28,7 @@ const FarmCards: React.FC = () => {
   const stakedValue = useAllStakedValue()
 
   const sushiIndex = farms.findIndex(
-    ({ tokenSymbol }) => tokenSymbol === 'SUSHI',
+    ({ tokenSymbol }) => tokenSymbol === 'UFO-BNB',
   )
 
 
@@ -42,17 +42,24 @@ const FarmCards: React.FC = () => {
 
   const rows = farms.reduce<FarmWithStakedValue[][]>(
     (farmRows, farm, i) => {
+      if (stakedValue[i]!=undefined){
+        console.log([i,stakedValue[i].totalWethValue.toNumber(),stakedValue[i].tokenAmount.toNumber(),stakedValue[i].tokenPriceInWeth.toNumber()])
+      }
       const farmWithStakedValue = {
         ...farm,
         ...stakedValue[i],
+
         apy: stakedValue[i]
           ? sushiPrice
+
               .times(SUSHI_PER_BLOCK)
               .times(BLOCKS_PER_YEAR)
               .times(stakedValue[i].poolWeight)
               .div(stakedValue[i].totalWethValue)
+
           : null,
       }
+
       const newFarmRows = [...farmRows]
       if (newFarmRows[newFarmRows.length - 1].length === 4) {
         newFarmRows.push([farmWithStakedValue])
@@ -126,7 +133,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
   }, [sushi, lpTokenAddress, account, setHarvestable])
 
   const poolActive = true // startTime * 1000 - Date.now() <= 0
-  // console.log(farm.totalWethValue)
+
   return (
     <StyledCardWrapper>
       {farm.tokenSymbol === 'DAI' && <StyledCardAccent />}
@@ -147,14 +154,14 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
               <StyledInsight>
                 <span>APY</span>
                 <span>
-                  {farm.apy
-                    ? `${farm.totalWethValue
-                        .times(new BigNumber(100))
-                        .times(new BigNumber(3))
-                        .toNumber()
-                        .toLocaleString('en-US')}%`
-                    : 'Loading ...'}
-                </span>
+                {farm.apy
+                  ? `${farm.apy
+                      .times(new BigNumber(100))
+                      .toNumber()
+                      .toLocaleString('en-US')
+                      }%`
+                  : 'Loading ...'}
+              </span>
                 {/* <span>
                   {farm.tokenAmount
                     ? (farm.tokenAmount.toNumber() || 0).toLocaleString('en-US')
@@ -181,7 +188,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
               )}
               </Button>
             </ContainerThrd>
-            
+
             {/* <Button
               href={`https://exchange.pancakeswap.finance/#/swap?outputCurrency=${farm.tokenAddress}`}
               text="Get token"
@@ -194,7 +201,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
                 />
               )}
             </Button> */}
-            
+
           </StyledContent>
         </CardContent>
       </Card>
