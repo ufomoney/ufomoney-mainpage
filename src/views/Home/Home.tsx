@@ -18,7 +18,7 @@ const Home: React.FC = () => {
         icon={<img src={logo} height={80} />}
         title="UFO Staking and Yield Farming"
         subtitle="Stake tokens to claim
-        your "
+        your UFO"
       />
 
       <Container size='bg'>
