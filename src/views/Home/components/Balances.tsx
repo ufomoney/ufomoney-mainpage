@@ -17,7 +17,10 @@ import useSushi from '../../../hooks/useSushi'
 import { getSushiAddress, getSushiSupply } from '../../../sushi/utils'
 import { getBalanceNumber } from '../../../utils/formatBalance'
 
+
+let first =0
 const PendingRewards: React.FC = () => {
+  console.log(first)
   const [start, setStart] = useState(0)
   const [end, setEnd] = useState(0)
   const [scale, setScale] = useState(1)
@@ -42,7 +45,7 @@ const PendingRewards: React.FC = () => {
   }
 
   useEffect(() => {
-    setStart(end)
+    setStart(end==0 ? sumEarning: end)
     setEnd(sumEarning)
   }, [sumEarning])
 
@@ -58,16 +61,18 @@ const PendingRewards: React.FC = () => {
       <CountUp
         start={start}
         end={end}
-        decimals={end < 0 ? 6 : end > 1e5 ? 0 : 6}
-        duration={20}
+        decimals={end > 10 ? 4 : end > 1 ? 5 : 6 }
+        duration={21}
         onStart={() => {
-          setScale(1.15)
+          setScale(1)
           setTimeout(() => setScale(1), 600)
         }}
         separator=","
+        useEasing={false}
       />
     </span>
   )
+
 }
 
 const Balances: React.FC = () => {
