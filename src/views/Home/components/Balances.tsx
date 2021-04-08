@@ -18,9 +18,9 @@ import { getSushiAddress, getSushiSupply } from '../../../sushi/utils'
 import { getBalanceNumber } from '../../../utils/formatBalance'
 
 
-let first =0
+
 const PendingRewards: React.FC = () => {
-  console.log(first)
+
   const [start, setStart] = useState(0)
   const [end, setEnd] = useState(0)
   const [scale, setScale] = useState(1)
