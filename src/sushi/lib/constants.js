@@ -491,17 +491,4 @@ export const supportedPools = [
     tokenSymbol: 'UFO-BNB',
     icon: '🛸',
   },
-  {
-    pid: 24,
-    lpAddresses: {
-      56: '0x5136655Eb0A62DB2596de2AD663Dec08DcC59013',
-    },
-    tokenAddresses: {
-      56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
-    },
-    name: 'Stake UFO-BUSD LP!',
-    symbol: 'UFO-BUSD LP',
-    tokenSymbol: 'UFO-BUSD',
-    icon: '🛸',
-  },
 ]
