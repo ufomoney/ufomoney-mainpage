@@ -54,23 +54,7 @@ export const addressMap = {
 // }
 
 
-/*
-SLP Address on mainnet for reference
-==========================================
-0  USDT 0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852
-1  USDC 0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc
-2  DAI  0xa478c2975ab1ea89e8196811f51a7b7ade33eb11
-3  sUSD 0xf80758ab42c3b07da84053fd88804bcb6baa4b5c
-4  COMP 0xcffdded873554f362ac02f8fb1f02e5ada10516f
-5  LEND 0xab3f9bf1d81ddb224a2014e98b238638824bcf20
-6  SNX  0x43ae24960e5534731fc831386c07755a2dc33d47
-7  UMA  0x88d97d199b9ed37c29d846d00d443de980832a22
-8  LINK 0xa2107fa5b38d9bbd2c461d6edf11b11a50f6b974
-9  BAND 0xf421c3f2e695c2d4c0765379ccace8ade4a480d9
-10 AMPL 0xc5be99a02c6857f9eac67bbce58df5572498f40c
-11 YFI  0x2fdbadf3c4d5a8666bc06645b8358ab803996e28
-12 SUSHI 0xce84867c3c02b05dc570d0135103d3fb9cc19433
-*/
+
 
 // export const supportedPools = [
 //   {
@@ -468,7 +452,7 @@ export const contractAddresses = {
     56: '0x2c7cd9468A3F9fEfb13E1BA49E4Fee406f1C13d6',
   },
   weth: {
-    56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+    56: '0x3b72ac46888f72dd6a6b2076ca96fcc18e75a935',
   },
   xSushi: {
     56: '0x8798249c2e607446efb7ad49ec89dd1865ff4272' // NOTE: Not in use
@@ -523,7 +507,7 @@ export const supportedPools = [
       56: '0x5136655Eb0A62DB2596de2AD663Dec08DcC59013',
     },
     tokenAddresses: {
-      56: '0x3B72Ac46888f72dD6a6B2076Ca96fcc18e75a935',
+      56: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
     },
     name: 'Stake UFO-BUSD LP!',
     symbol: 'UFO-BUSD LP',
