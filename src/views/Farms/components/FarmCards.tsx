@@ -43,8 +43,9 @@ const FarmCards: React.FC = () => {
   const rows = farms.reduce<FarmWithStakedValue[][]>(
     (farmRows, farm, i) => {
       if (stakedValue[i]!=undefined){
-        console.log([i,stakedValue[i].totalWethValue.toNumber(),stakedValue[i].tokenAmount.toNumber(),stakedValue[i].tokenPriceInWeth.toNumber()])
+        //console.log([i,sushiPrice.toNumber(),stakedValue[i].poolWeight,stakedValue[i].totalWethValue.toNumber()])
       }
+
       const farmWithStakedValue = {
         ...farm,
         ...stakedValue[i],
@@ -52,10 +53,10 @@ const FarmCards: React.FC = () => {
         apy: stakedValue[i]
           ? sushiPrice
 
-              .times(SUSHI_PER_BLOCK)
-              .times(BLOCKS_PER_YEAR)
-              .times(stakedValue[i].poolWeight)
-              .div(stakedValue[i].totalWethValue)
+               .times(SUSHI_PER_BLOCK)
+               .times(BLOCKS_PER_YEAR)
+               .times(stakedValue[i].poolWeight)
+               .div(stakedValue[i].totalWethValue)
 
           : null,
       }
