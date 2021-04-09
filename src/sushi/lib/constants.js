@@ -504,6 +504,7 @@ export const supportedPools = [
     tokenSymbol: 'UFO-BNB',
     icon: '🚀',
   },
+
   {
     pid: 1,
     lpAddresses: {
