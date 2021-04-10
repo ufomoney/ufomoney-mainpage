@@ -6,6 +6,7 @@ import ModalActions from '../../../components/ModalActions'
 import ModalTitle from '../../../components/ModalTitle'
 import TokenInput from '../../../components/TokenInput'
 import { getFullDisplayBalance } from '../../../utils/formatBalance'
+import styled from 'styled-components'
 
 interface WithdrawModalProps extends ModalProps {
   max: BigNumber
@@ -48,20 +49,31 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({
         symbol={tokenName}
       />
       <ModalActions>
-        <Button text="Cancel" variant="secondary" onClick={onDismiss} />
-        <Button
-          disabled={pendingTx}
-          text={pendingTx ? 'Pending Confirmation' : 'Confirm'}
-          onClick={async () => {
-            setPendingTx(true)
-            await onConfirm(val)
-            setPendingTx(false)
-            onDismiss()
-          }}
-        />
+        <StyledButton>
+          <Button text="Cancel" variant="secondary" onClick={onDismiss} />
+          <Button
+            disabled={pendingTx}
+            text={pendingTx ? 'Pending Confirmation' : 'Confirm'}
+            onClick={async () => {
+              setPendingTx(true)
+              await onConfirm(val)
+              setPendingTx(false)
+              onDismiss()
+            }}
+          />
+        </StyledButton>
       </ModalActions>
     </Modal>
   )
 }
+
+const StyledButton = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+> button {
+  width: 100px;
+}
+`
 
 export default WithdrawModal
