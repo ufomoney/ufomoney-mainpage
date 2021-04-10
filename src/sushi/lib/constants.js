@@ -481,7 +481,7 @@ export const supportedPools = [
       56: '0xF9Cf5fe86d2503439E6DBFd6C9f2F7CCbb981B62',
     },
     tokenAddresses: {
-      56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+      56: '0x3B72Ac46888f72dD6a6B2076Ca96fcc18e75a935',
     },
     getLPtoken: {
       56: 'BNB',
