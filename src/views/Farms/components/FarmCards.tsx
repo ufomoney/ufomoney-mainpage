@@ -161,7 +161,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
                       .toNumber()
                       .toLocaleString('en-US')
                       }%`
-                  : 'Loading ...'}
+                  : 'Loading'}
               </span>
                 {/* <span>
                   {farm.tokenAmount
