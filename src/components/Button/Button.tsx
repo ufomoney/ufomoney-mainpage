@@ -144,7 +144,7 @@ display: flex;
 }
 
 @media (max-width: 530px) {
-  margin-left: 3px;
+  margin-left: 2px;
 }
 `
 
