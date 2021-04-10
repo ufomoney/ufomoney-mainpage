@@ -188,20 +188,19 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
                 />
               )}
               </Button>
-            </ContainerThrd>
-
-            {/* <Button
-              href={`https://exchange.pancakeswap.finance/#/swap?outputCurrency=${farm.tokenAddress}`}
-              text="Get token"
-              variant="secondary"
-            >
+              <Button
+              disabled={!poolActive}
+              text={poolActive ? 'Get Token' : undefined}
+              to={`/farms/${farm.id}`}
+              >
               {!poolActive && (
                 <Countdown
                   date={new Date(startTime * 1000)}
                   renderer={renderer}
                 />
               )}
-            </Button> */}
+              </Button>
+            </ContainerThrd>
 
           </StyledContent>
         </CardContent>
