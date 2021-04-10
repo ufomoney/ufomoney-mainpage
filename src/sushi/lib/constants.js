@@ -483,6 +483,9 @@ export const supportedPools = [
     tokenAddresses: {
       56: '0x3B72Ac46888f72dD6a6B2076Ca96fcc18e75a935',
     },
+    getLPtoken: {
+      56: 'BNB',
+    },
     name: 'Stake UFO-BNB LP!',
     symbol: 'UFO-BNB LP',
     tokenSymbol: 'UFO-BNB',
@@ -507,6 +510,9 @@ export const supportedPools = [
       56: '0x5136655Eb0A62DB2596de2AD663Dec08DcC59013',
     },
     tokenAddresses: {
+      56: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
+    },
+    getLPtoken: {
       56: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
     },
     name: 'Stake UFO-BUSD LP!',

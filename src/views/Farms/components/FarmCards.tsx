@@ -191,7 +191,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
               <Button
               disabled={!poolActive}
               text={poolActive ? 'Get Token' : undefined}
-              href={`https://exchange.pancakeswap.finance/#/add/${farm.tokenAddress}/0x3b72ac46888f72dd6a6b2076ca96fcc18e75a935`}
+              href={`https://exchange.pancakeswap.finance/#/add/${farm.getLPtoken}/0x3b72ac46888f72dd6a6b2076ca96fcc18e75a935`}
               >
               {!poolActive && (
                 <Countdown

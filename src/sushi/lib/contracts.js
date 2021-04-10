@@ -31,6 +31,7 @@ export class Contracts {
       Object.assign(pool, {
         lpAddress: pool.lpAddresses[networkId],
         tokenAddress: pool.tokenAddresses[networkId],
+        getLPtoken: pool.getLPtoken[networkId],
         lpContract: new this.web3.eth.Contract(UNIV2PairAbi),
         tokenContract: new this.web3.eth.Contract(ERC20Abi),
       }),
@@ -53,9 +54,9 @@ export class Contracts {
     setProvider(this.weth, contractAddresses.weth[networkId])
 
     this.pools.forEach(
-      ({ lpContract, lpAddress, tokenContract, tokenAddress }) => {
+      ({ lpContract, lpAddress, tokenContract, tokenAddress,getLPtoken }) => {
         setProvider(lpContract, lpAddress)
-        setProvider(tokenContract, tokenAddress)
+        setProvider(tokenContract, tokenAddress, getLPtoken)
       },
     )
   }
