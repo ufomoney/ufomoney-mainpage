@@ -161,7 +161,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm }) => {
                       .toNumber()
                       .toLocaleString('en-US')
                       }%`
-                  : 'Loading ...'}
+                  : 'Loading'}
               </span>
                 {/* <span>
                   {farm.tokenAmount
@@ -335,6 +335,10 @@ const StyledTitle = styled.h4`
   // margin: ${(props) => props.theme.spacing[2]}px 0 0;
   margin: 0;
   padding: 0;
+
+  @media (max-width: 441px) {
+    font-size: 20px;
+  }
 `
 
 const StyledContent = styled.div`
@@ -372,6 +376,10 @@ const StyledInsight = styled.div`
   border: 1px solid #e6dcd5;
   text-align: center;
   padding: 0 12px;
+
+  > span:first-child {
+    margin-right: 2px;
+  }
 `
 
 export default FarmCards

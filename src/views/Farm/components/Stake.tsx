@@ -121,6 +121,9 @@ const StyledCardHeader = styled.div`
   display: flex;
   width: 100%;
   margin-top: 10px;
+  @media (max-width: 441px) {
+    height: 52px;
+  }
 `
 const StyledCardActions = styled.div`
 display: flex;

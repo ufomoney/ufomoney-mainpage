@@ -69,6 +69,7 @@ const DepositModal: React.FC<DepositModalProps> = ({
 
 const StyledButton = styled.div`
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-around;
   width: 300px;
 > button {
