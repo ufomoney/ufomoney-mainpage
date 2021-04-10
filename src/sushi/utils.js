@@ -56,7 +56,7 @@ export const getFarms = (sushi) => {
           lpTokenAddress: lpAddress,
           lpContract,
           tokenAddress,
-          getLPtoken
+          getLPtoken,
           tokenSymbol,
           tokenContract,
           earnToken: 'UFO',
