@@ -17,6 +17,7 @@ const Farm: React.FC = () => {
   const { farmId } = useParams()
   const {
     pid,
+    getLPtoken,
     lpToken,
     lpTokenAddress,
     tokenAddress,
@@ -25,6 +26,7 @@ const Farm: React.FC = () => {
     icon,
   } = useFarm(farmId) || {
     pid: 0,
+    getLPtoken: '',
     lpToken: '',
     lpTokenAddress: '',
     tokenAddress: '',
