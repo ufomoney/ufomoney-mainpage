@@ -16,7 +16,7 @@ const TopBar: React.FC<TopBarProps> = ({ onPresentMobileMenu }) => {
     <StyledTopBar>
       <StyleHeaderText>
         Do not get scammed. Make sure the URL is <a
-        style={{ color:' #00dffc', textDecoration: 'none'}} href=" ufo.money">
+        style={{ color:' #00dffc', textDecoration: 'none'}} href="https://ufo.money/">
           ufo.money</a>
        </StyleHeaderText>
       <Container size="lg">
