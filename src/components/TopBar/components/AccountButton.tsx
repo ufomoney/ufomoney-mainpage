@@ -31,10 +31,10 @@ const AccountButton: React.FC<AccountButtonProps> = (props) => {
         // <Button onClick={onPresentAccountModal} size="sm" text="My Wallet" />
         <StyledMyWalletButton onClick={onPresentAccountModal}>My wallet</StyledMyWalletButton>
       )}
-      <a href="https://ufo.money" style={{textDecoration: 'none'}}>
+      <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x3b72ac46888f72dd6a6b2076ca96fcc18e75a935" style={{textDecoration: 'none'}}>
         <StyledUFOButton>
           <img src={earnUfo} width="34"/>
-          Earn UFO</StyledUFOButton>
+          Get UFO</StyledUFOButton>
       </a>
       
     </StyledAccountButton>

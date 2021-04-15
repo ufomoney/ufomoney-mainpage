@@ -16,7 +16,7 @@ const Home: React.FC = () => {
     <Page>
       <PageHeader
         icon={<img src={logo} height={80} />}
-        title="UFO Staking and Yield Farming"
+        title="UFO Money Yield Farming"
         subtitle="Stake tokens to claim
         your UFO"
       />
@@ -28,14 +28,14 @@ const Home: React.FC = () => {
         <img src={bag} height="39" width="41"/>
         <div>
           <div>UFO-BNB LP</div>
-          <div>token pool yields 6x more token rewards per block</div>
+          <div>token pool yields more token rewards per block</div>
         </div>
         
       </StyledInfo>
       <Spacer size="lg" />
       <StyledButton to="/farms">
         <img src={mining} width="24"/> 
-        <div>DISCOVER MINING</div>
+        <div>DISCOVER FARMING</div>
       </StyledButton>
         {/* <Button text="👀 See the Pools" to="/farms" variant="secondary" /> */}
     </Page>
