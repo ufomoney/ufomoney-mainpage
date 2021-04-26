@@ -507,38 +507,6 @@ export const supportedPools = [
     tokenSymbol: 'UFO-BUSD',
     icon: '🛸',
   },
-  {
-    pid: 9,
-    lpAddresses: {
-      56: '0xF9Cf5fe86d2503439E6DBFd6C9f2F7CCbb981B62',
-    },
-    tokenAddresses: {
-      56: '0x3B72Ac46888f72dD6a6B2076Ca96fcc18e75a935',
-    },
-    getLPtoken: {
-      56: 'BNB',
-    },
-    name: 'Finished!',
-    symbol: 'UFO-BNB LP',
-    tokenSymbol: 'OLD-UFO-BNB',
-    icon: '🏁',
-  },
-  {
-    pid: 24,
-    lpAddresses: {
-      56: '0x5136655Eb0A62DB2596de2AD663Dec08DcC59013',
-    },
-    tokenAddresses: {
-      56: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
-    },
-    getLPtoken: {
-      56: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
-    },
-    name: 'Finished!',
-    symbol: 'UFO-BUSD LP',
-    tokenSymbol: 'OLD-UFO-BUSD',
-    icon: '🏁',
-  },
   // },
   // {
   //   pid: 3,
