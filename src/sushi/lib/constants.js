@@ -518,10 +518,10 @@ export const supportedPools = [
     getLPtoken: {
       56: 'BNB',
     },
-    name: 'Unstake Now!',
+    name: 'Finished!',
     symbol: 'UFO-BNB LP',
-    tokenSymbol: 'UFO-BNB',
-    icon: '🚀',
+    tokenSymbol: 'OLD-UFO-BNB',
+    icon: '🏁',
   },
   {
     pid: 24,
@@ -534,10 +534,10 @@ export const supportedPools = [
     getLPtoken: {
       56: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
     },
-    name: 'Unstake Now!',
+    name: 'Finished!',
     symbol: 'UFO-BUSD LP',
-    tokenSymbol: 'UFO-BUSD',
-    icon: '🛸',
+    tokenSymbol: 'OLD-UFO-BUSD',
+    icon: '🏁',
   },
   // },
   // {
