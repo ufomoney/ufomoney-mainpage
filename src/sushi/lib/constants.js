@@ -475,10 +475,10 @@ export const supportedPools = [
   //   tokenSymbol: 'UFO',
   //   icon: '👽',
   // },
-   {
-    pid: 25,
+  {
+    pid: 9,
     lpAddresses: {
-      56: '0x04533cEe3FdF190da9dFf61B2358c4198e6AAC04',
+      56: '0xF9Cf5fe86d2503439E6DBFd6C9f2F7CCbb981B62',
     },
     tokenAddresses: {
       56: '0x3B72Ac46888f72dD6a6B2076Ca96fcc18e75a935',
@@ -486,15 +486,15 @@ export const supportedPools = [
     getLPtoken: {
       56: 'BNB',
     },
-    name: 'Stake UFO-BNB LP!',
+    name: 'Finished!',
     symbol: 'UFO-BNB LP',
-    tokenSymbol: 'UFO-BNB',
-    icon: '🚀',
+    tokenSymbol: 'OLD-UFO-BNB',
+    icon: '🏁',
   },
   {
-    pid: 26,
+    pid: 24,
     lpAddresses: {
-      56: '0xfFc6E4edb4752ded606d336F7eCf7e01f21f305a',
+      56: '0x5136655Eb0A62DB2596de2AD663Dec08DcC59013',
     },
     tokenAddresses: {
       56: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
@@ -502,10 +502,10 @@ export const supportedPools = [
     getLPtoken: {
       56: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
     },
-    name: 'Stake UFO-BUSD LP!',
+    name: 'Finished!',
     symbol: 'UFO-BUSD LP',
-    tokenSymbol: 'UFO-BUSD',
-    icon: '🛸',
+    tokenSymbol: 'OLD-UFO-BUSD',
+    icon: '🏁',
   },
   // },
   // {
