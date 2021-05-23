@@ -8,8 +8,8 @@ const Nav: React.FC = () => {
       <StyledAbsoluteLink href="https://ufo.money">
         Home
       </StyledAbsoluteLink>
-      <StyledAbsoluteLink href="https://swap.ufo.money">
-        Exchange
+      <StyledAbsoluteLink href="https://sufo.ufo.money">
+        Sufo
       </StyledAbsoluteLink>
       <StyledLink exact activeClassName="active" to="/farms">
         Stake
