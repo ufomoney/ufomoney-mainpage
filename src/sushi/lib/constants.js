@@ -478,7 +478,7 @@ export const supportedPools = [
   {
     pid: 27,
     lpAddresses: {
-      56: '0x04533cEe3FdF190da9dFf61B2358c4198e6AAC04',
+      56: '0x43599A3C53f0d3514945F1b7eab420f11c6326D8',
     },
     tokenAddresses: {
       56: '0x2E427a0EbeAf2656A23FC289b12CE48f9CC3Fb7A',
