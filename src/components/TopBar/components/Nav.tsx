@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Nav: React.FC = () => {
   return (
     <StyledNav>
-      <StyledAbsoluteLink href="https://ufo.money">
+      <StyledAbsoluteLink href="https://liquidity-mining.ufo.money">
         Home
       </StyledAbsoluteLink>
       <StyledAbsoluteLink href="https://sufo.ufo.money">
