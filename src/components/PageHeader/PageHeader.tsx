@@ -47,7 +47,6 @@ const StyledIcon = styled.div`
 `
 
 const StyledTitle = styled.h1`
-  font-family: 'Arial Rounded MT';
   color: ${(props) => props.theme.color.grey[600]};
   color: #fff;
   font-size: 35px;

@@ -134,7 +134,7 @@ justify-content: space-around;
 margin-bottom: 10px;
 
 > button {
-  font-family: 'Arial Rounded MT';
+  font-family: "Noto Sans",sans-serif;
   color: #fff;
   float: right;
   display: flex;
@@ -142,6 +142,7 @@ margin-bottom: 10px;
   align-items: center;
   width: 129px;
   height: 32px;
+  font-size: 14px;
   background: linear-gradient(90deg, #007ED9 16.36%, 
     rgba(0, 223, 252, 0.94) 106.83%);
   border-radius: 50px;

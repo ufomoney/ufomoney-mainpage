@@ -39,7 +39,6 @@ const Value: React.FC<ValueProps> = ({ value, decimals }) => {
 }
 
 const StyledValue = styled.div`
-  font-family: 'Arial Rounded MT';
   // color: ${(props) => props.theme.color.grey[600]};
   color: #243e60;
   margin-top: 5px;

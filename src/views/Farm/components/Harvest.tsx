@@ -75,7 +75,6 @@ const StyledCardActions = styled.div`
   margin-bottom: 10px;
   
   > button {
-    font-family: 'Arial Rounded MT';
     color: #fff;
     float: right;
     display: flex;

@@ -14,7 +14,6 @@ const StyledLabel = styled.div`
   color: #243e60;
   font-size: 16px;
   font-weight: bolder;
-  font-family: 'Arial Rounded MT';
 `
 
 export default Label

@@ -147,7 +147,6 @@ const Footnote = styled.div`
   justify-content: space-around;
   align-items: center;  
   font-size: 14px;
-  font-family: 'Arial Rounded MT';
   font-weight: bolder;
   // padding: 8px 20px;
   padding-bottom: 10px;
@@ -157,7 +156,6 @@ const Footnote = styled.div`
 
 `
 const FootnoteValue = styled.div`
-  font-family: 'Arial Rounded MT';
   color: #fff;
   float: right;
   display: flex;
