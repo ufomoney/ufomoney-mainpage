@@ -523,6 +523,22 @@ export const supportedPools = [
     tokenSymbol: 'UFO-BUSD',
     icon: '🛸',
   },
+  {
+    pid: 0,
+    lpAddresses: {
+      56: '0x3B72Ac46888f72dD6a6B2076Ca96fcc18e75a935',
+    },
+    tokenAddresses: {
+      56: '0x3B72Ac46888f72dD6a6B2076Ca96fcc18e75a935',
+    },
+    getLPtoken: {
+      56: '0x3B72Ac46888f72dD6a6B2076Ca96fcc18e75a935',
+    },
+    name: 'Stake UFO!',
+    symbol: 'UFO',
+    tokenSymbol: 'UFO',
+    icon: '👽',
+  },
   // },
   // {
   //   pid: 3,
