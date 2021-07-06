@@ -539,6 +539,22 @@ export const supportedPools = [
     tokenSymbol: 'UFO',
     icon: '👽',
   },
+  {
+    pid: 28,
+    lpAddresses: {
+      56: '0x2E427a0EbeAf2656A23FC289b12CE48f9CC3Fb7A',
+    },
+    tokenAddresses: {
+      56: '0x2E427a0EbeAf2656A23FC289b12CE48f9CC3Fb7A',
+    },
+    getLPtoken: {
+      56: '0x2E427a0EbeAf2656A23FC289b12CE48f9CC3Fb7A',
+    },
+    name: 'Stake SUFO!',
+    symbol: 'SUFO',
+    tokenSymbol: 'SUFO',
+    icon: '💎',
+  },
   // },
   // {
   //   pid: 3,
