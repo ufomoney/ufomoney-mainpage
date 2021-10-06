@@ -11,6 +11,9 @@ const Nav: React.FC = () => {
       <StyledAbsoluteLink href="https://sufo.ufo.money">
         Sufo
       </StyledAbsoluteLink>
+      <StyledAbsoluteLink href="https://no-loss-lotteries.ufo.money">
+        No-loss lotteries
+      </StyledAbsoluteLink>
       <StyledLink exact activeClassName="active" to="/farms">
         Stake
       </StyledLink>
